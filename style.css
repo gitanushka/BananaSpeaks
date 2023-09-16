@@ -1,56 +1,99 @@
-body{
-    margin: 0px;
-    padding: 0px;
+/* Reset some default styles */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background image */
+body {
+    margin: 0;
+    padding: 0;
     background-image: url(images/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+    font-family: Arial, sans-serif; /* Choose an appropriate font-family */
 }
-h2{
+
+/* Center-align the heading and style it */
+.heading {
+    background-color: yellow;
+    padding: 0.5em 0;
     text-align: center;
 }
 
-.heading{
-    background-color: yellow;
-    padding: .5em 0;  
-}
-
-#txt-input{
-    display: block;
-    width: 60%;
+/* Style the textarea */
+#txt-input {
+    width: 100%;
     height: 10vh;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-#btn-translate{
-   position: relative;
-   left: 240px;
-   background-color: yellow;
-   border: 0px;
-   padding: 15px;
+/* Style the translation button */
+#btn-translate {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
 }
 
-.translation{
-  position: absolute;
-  left: 255px;
-  margin-bottom: 15px;
-  color: aliceblue;
+/* Style the translation output */
+.translation {
+    text-align: center;
+    margin-bottom: 15px;
+    color: aliceblue;
 }
 
-#output{
+/* Style the output container */
+#output {
     border: 1px solid white;
     display: block;
-    width: 60%;
+    width: 100%;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem auto;
     height: 10vh;
     position: relative;
-    left: 238px;
-    margin-top: 35px;
     color: aliceblue;
-    
+}
+
+/* Add media queries for responsiveness */
+@media screen and (min-width: 768px) {
+    .heading {
+        font-size: 24px;
+    }
+
+    #txt-input {
+        font-size: 18px;
+    }
+
+    #btn-translate {
+        font-size: 18px;
+    }
+
+    .translation {
+        font-size: 24px;
+    }
+}
+
+/* Mobile-friendly input and button styles */
+@media screen and (max-width: 768px) {
+    #txt-input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    #btn-translate {
+        width: 90%;
+        font-size: 14px;
+    }
 }
